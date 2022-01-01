@@ -1000,11 +1000,11 @@ var
   blockhash_size: integer;
   blocklist_size: integer;  // size, in bytes of the blocklists
 
-// offset pointers 
+// offset pointers
   blockptrs: blocklist_pap;
   num_blockptrs: integer;
 
-// hashkey function for search 
+// hashkey function for search
 function blockhash_key(const bl: blocklist_p): integer;
 var
   i: integer;
@@ -1042,7 +1042,7 @@ begin
   result := 0;
 end;
 
-// search for an identical blocklist 
+// search for an identical blocklist
 function blockhash_search(const bl: blocklist_p): blocklist_p;
 var
   hash: integer;
@@ -1058,7 +1058,7 @@ begin
   end;
 end;
 
-// add a new blocklist to the hashtable 
+// add a new blocklist to the hashtable
 function blockhash_add(const newbl: blocklist_p): blocklist_p;
 var
   bl: blocklist_p;
@@ -1233,8 +1233,8 @@ var
   lsx, lsy, lex, ley: integer;
 
 //--------------------------------------------------------------------------
-// Find limits from a list of segs, does this by stepping through the segs 
-// and comparing the vertices at both ends. 
+// Find limits from a list of segs, does this by stepping through the segs
+// and comparing the vertices at both ends.
 //--------------------------------------------------------------------------
 
 const
@@ -1539,7 +1539,7 @@ begin
   inc(num_pnodes);
 end;
 
-// Height of nodes 
+// Height of nodes
 function height(const tn: node_p): LongWord;
 var
   r, l: LongWord;
@@ -1699,7 +1699,7 @@ begin
 // the assumption that if two segs are parallel, they came
 // from the same linedef. This is clearly not always true.
 
-//  if (tmps->flip != best->flip)   old logic -- wrong!!! 
+//  if (tmps->flip != best->flip)   old logic -- wrong!!!
 
 // We know the segs are parallel or nearly so, so take their
 // dot product to determine their relative orientation.
@@ -1836,7 +1836,7 @@ begin
         nsec := sidedefs[linedefs[line.linedef].sidedef2].sector
       else
         nsec := sidedefs[linedefs[line.linedef].sidedef1].sector;
-                                    
+
       if (nsec <> sector) and (sectors[nsec].tag < 900) then
       begin
         result := true;

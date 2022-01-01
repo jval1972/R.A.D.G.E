@@ -719,7 +719,7 @@ type
     next: texture_cell_p;
   end;
 
-// General linked list of flats 
+// General linked list of flats
   flat_cell_t = record
     flat: flat_p;
     next: flat_cell_p;
@@ -882,7 +882,7 @@ const
   NUKAGE1_SPECIAL = 5;
   DEATH_SECTOR = $0b;
 
-// Stuff related to an open PWAD we're generating 
+// Stuff related to an open PWAD we're generating
 type
   index_entry_p = ^index_entry_t;
   index_entry_t = record
@@ -1078,7 +1078,7 @@ type
     seen_suit: boolean;
     seen_map: boolean;
     scrolling_keylights: boolean;
-    skyclosets: integer;      // Percent chance of closets being open to the sky 
+    skyclosets: integer;      // Percent chance of closets being open to the sky
     p_new_pillars: Integer;
     p_stair_lamps: Integer;
     p_force_nukage: Integer;
@@ -1102,14 +1102,14 @@ type
     barcount: Integer;        // How many door-bars so far?
     crushercount: Integer;    // How many left-on crushers so far?
     hugeness: Integer;        // A one or a two or whatever
-    skullkeys: boolean;       // Use skull (not card) keys? 
+    skullkeys: boolean;       // Use skull (not card) keys?
     use_gates: boolean;       // Allowed to use non-exit teleporters?
     raise_gates: boolean;     // Teleport flats raised a bit?
     all_wide_links: boolean;
     no_doors: boolean;
     outside_light_level: SmallInt;  // I don't know if it's cloudy or bright
     bright_light_level: SmallInt;   // How bright a bright room is
-    lit_light_level: SmallInt;      // How bright a working lamp/light is 
+    lit_light_level: SmallInt;      // How bright a working lamp/light is
     // These lists are just for memory-freeing purposes
     style_anchor: style_p;
     link_anchor: link_p;
